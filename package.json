@@ -1,0 +1,43 @@
+{
+  "name": "megobari",
+  "version": "1.0.0",
+  "description": "web site megobari",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexanderDolgan/megobari.git"
+  },
+  "keywords": [
+    "megobari"
+  ],
+  "author": "Alexander Dolgan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexanderDolgan/megobari/issues"
+  },
+  "homepage": "https://github.com/AlexanderDolgan/megobari#readme",
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-clean-css": "^3.9.3",
+    "gulp-concat": "^2.6.1",
+    "gulp-filter": "^5.1.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "3.2.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.0",
+    "gulp-util": "^3.0.7",
+    "gulp-watch": "^5.0.0",
+    "gulp.spritesmith": "^6.9.0",
+    "imagemin-pngquant": "5.1.0",
+    "rimraf": "^2.6.2"
+  }
+}

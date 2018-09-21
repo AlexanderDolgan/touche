@@ -1,0 +1,35 @@
+#site-header .header-mid {
+	padding: 2rem;
+	& .logo {
+		width: percentage(5/12);
+		font-size: 0;
+	}
+	& .nav {
+			width: percentage(2/12);
+	}
+}
+
+@media (min-width: $b-medium) {
+	#site-header .header-mid{
+		& .logo {
+			width: percentage($number: 3/12);
+		}
+		& .nav {
+			width: percentage($number: 1/12);
+		}
+	}
+}
+
+@media (min-width: $b-xlarge) {
+	#site-header .header-mid{
+		padding: 4rem 2rem;
+		justify-content: space-between;
+		& .logo {
+			max-width: percentage($number: 2/12);
+		}
+		& .nav {
+			width: 100%;
+			text-align: right;
+		}
+	}
+}

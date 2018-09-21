@@ -1,0 +1,53 @@
+@import "mixin";
+
+//Global
+$global-font-family: 'grotesque', sans-serif;
+$second-font-family: 'girottbold', sans-serif;
+$global-font-size: 8px;
+$body-font-size: 2rem;
+$global-line-height: 1.5;
+$font-smooth: antialiased;
+
+//Colors
+$colors: (
+	primary: hsl(34, 97, 47),
+	secondary: hsl(212,73,60),
+	third: hsl(309,100,80),
+	text: hsl(0,0,16),
+	accept: hsl(90,45,45),
+	alert: hsl(0,100,70),
+	white: hsl(0,0,100),
+	black: hsl(0,0,0),
+	gray: hsl(0,0,60),
+	lightgray: hsl(0,0,94)
+);
+
+$body-background: ac(white);
+$body-font-color: ac(text);
+
+// Media q breakpoints
+
+$b-xsmall: 0;
+$b-small: 321px;
+$b-medium-advance: 640px;
+$b-medium: 768px;
+$b-large: 1024px;
+$b-xlarge: 1280px;
+$b-xxlarge: 1600px;
+
+$b-small-only: 0 319px;
+$b-medium-only: 320px 959px;
+$b-large-only: 960px;
+
+//container width
+$container: 1080px;
+
+//Typography
+
+$paragraph-lineheight: 1.5;
+
+$header-font-family: $second-font-family;
+$header-font-weight: normal;
+$header-color: $body-font-color;
+$header-text-transform: uppercase;
+$header-lineheight: 1.2;

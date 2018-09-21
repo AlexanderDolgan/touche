@@ -1,0 +1,38 @@
+include partials/head
+body
+	#site-wrapper
+		include partials/site-header-inside
+
+		section#site-main
+			.menu-category
+				ul
+					li: a(href="#").menu-category-btn: h2.kitchen Кухня
+					li: a(href="#").menu-category-btn: h2.bar Бар
+			.menu
+				.menu-content
+					ul.menu-content-nav
+						li 
+							a(href="#") Холодные закуски
+						li
+							a(href="#") Выпечка
+						li
+							a(href="#") Хинкали
+						li
+							a(href="#") Чебуреки
+						li 
+							a(href="#") Супы
+						li
+							a(href="#") Горячие блюда
+						li
+							a(href="#") Мангал
+						li
+							a(href="#") Гарниры
+						li
+							a(href="#") Соусы
+						li
+							a(href="#") Десерты
+					.menu-item
+						
+
+		section#site-footer
+			include partials/site-footer

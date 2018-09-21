@@ -1,0 +1,92 @@
+//Галерея на страницах
+.gallery-preview {
+	@include container();
+	padding-right: .25rem;
+	padding-left: .25rem;
+	text-align: center;
+	& h2 {
+		text-align: center;
+		margin-top: 0;
+		&::after {
+			content: '';
+			display: block;
+			width: 40%;
+			height: 0.2rem;
+			background-color: ac(primary);
+			margin: 0 auto;
+			margin-top: 2rem;
+		}
+	}
+	& .btn {
+		display: inline-block;
+		width: 100%;
+		margin-top: 2rem;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+.gallery-preview-wrapper {
+	display: flex;
+	flex-flow: row wrap;
+	&-item {
+		width: percentage(6/12);
+		padding: .25rem;
+		&:nth-child(n+7) {
+			display: none;
+		}
+		&-img {
+			position: relative;
+			height: 13rem;
+			overflow: hidden;
+			& img {
+				position: absolute;
+				width: 40rem;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
+	}
+}
+
+@media (min-width: $b-medium-advance) {
+	.gallery-preview {
+		& .btn {
+			width: auto;
+		}
+	}
+	.gallery-preview-wrapper {
+		&-item {
+			width: percentage(4/12);
+			&-img {
+				height: 18rem;
+			}
+		}
+	}
+}
+
+@media (min-width: $b-medium) {
+	.gallery-preview-wrapper {
+		&-item {
+			width: percentage(3/12);
+			&-img {
+				height: 20rem;
+			}
+			&:nth-child(n+7) {
+				display: block;
+			}
+		}
+	}
+}
+
+@media (min-width: $b-large) {
+	.gallery-preview-wrapper {
+		&-item {
+			&-img {
+				height: 22rem;
+			}
+		}
+	}
+}

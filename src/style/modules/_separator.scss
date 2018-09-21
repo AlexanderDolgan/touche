@@ -1,0 +1,50 @@
+.separator {
+	position: relative;
+	display: flex;
+	height: 35rem;
+	align-items: center;
+	background-image: url(../img/gallery/1.jpg);
+	background-position: center;
+	background-size: cover;
+	&-black {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background-color: hsla(0,0,0,.4);
+	}
+}
+
+// @supports (background-attachment: fixed) {
+//   .separator {
+//     background-attachment: fixed;
+//   }
+// }
+
+.separator-content {
+	width: 100%;
+	text-align: center;
+	z-index: 1;
+	& h2 {
+		margin: 0;
+		color: ac(white);
+	}
+	& p {
+		margin: 0;
+		color: ac(white);
+	}
+}
+
+
+@media (min-width: $b-medium) {
+	.separator {
+		background-attachment: fixed;
+	}
+}
+
+@media (min-width: $b-xlarge) {
+	.separator {
+		height: 50rem;
+	}
+}

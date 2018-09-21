@@ -1,0 +1,20 @@
+include partials/head
+body
+	#site-wrapper
+		include partials/site-header-inside
+
+		section#site-main
+			.contacts
+				address
+					ul
+						li: a(href="#") Адрес: г. Москва, Тверская, 36
+						li: a(href="tel:+74957655256") Телефон: +7 (495) 765-52-56
+						li: a(href="mailto:e-mail: info@grossmetall.ru") e-mail: info@grossmetall.ru
+				.social
+					a(href="//www.facebook.com/megobari15/" target="_blank").ic-fb
+					a(href="//www.instagram.com/megobari.wine/" target="_blank").ic-in
+					
+				#map
+
+		section#site-footer
+			include partials/site-footer

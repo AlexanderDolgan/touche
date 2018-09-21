@@ -1,0 +1,115 @@
+include partials/head
+body
+	#site-wrapper
+		include partials/site-header
+
+		section#site-main
+			.categories
+				.categories-item
+					a(href="#")
+						.categories-item-text
+							h2 О ресторане
+						.categories-item-img-wrapper
+							.categories-item-img-wrapper-shade
+							img(src="img/gallery/1.jpg", alt="cat img")
+
+				.categories-item
+					a(href="#")
+						.categories-item-text
+							h2 Меню
+						.categories-item-img-wrapper
+							.categories-item-img-wrapper-shade
+							img(src="img/gallery/2.jpg", alt="cat img")
+
+				.categories-item
+					a(href="#")
+						.categories-item-text
+							h2 Специальное предложение
+						.categories-item-img-wrapper
+							.categories-item-img-wrapper-shade
+							img(src="img/gallery/3.jpg", alt="cat img")
+			
+			.text
+				h2 Грузинский винный бар MeGoBari
+				.text-wrapper
+					p.
+						Ресторанная группа Guliani Group (рестораны и кулинарные лавки Оджахури, Хинкали Хаус, Kulinari, Mochi) запустила новый проект на Маросейке – грузинский винный бар MEGOBARI.
+					
+					p.
+						Megobari с грузинского переводится, как «друг». Если Оджахури (переводится как «семья», «домашний») – проект, больше подходящий для семейных посиделок и банкетов, в том числе и с детьми, то новый проект будет с акцентом на времяпрепровождение в кругу друзей с вином и грузинской кухней.
+					p.
+						Шеф-поваром нового проекта стал Тамаз Орагвелидзе, прославивший кафе на фуникулере в Тбилиси своими аджарскими хачапури и пончиками. Су шефом стал Борис Гиоргберидзе, который также является шеф-хинкальщиком Хинкали Хаус и Оджахури. Открытая кухня строится вокруг дровяной печи, в которой тут выпекают аджарские хачапури с хрустящим тонким тестом и начинками на любой вкус. Например, лодочка со свеклой и сыром; со шпинатом и сыром: с сыром и беконом или с курицей. Также в печи готовят мегрельские или имеретинские хачапури , и домашние.
+
+			.separator
+				.separator-content
+					h2 Летнее меню
+					p Бизнес ланч от 330 руб.
+				.separator-black
+
+			.gallery-preview
+				h2 Галерея
+				.gallery-preview-wrapper
+					.gallery-preview-wrapper-item
+						.gallery-preview-wrapper-item-img
+							a(data-fancybox="gallery" href="img/gallery/2.jpg")
+								img(src="/img/gallery/2.jpg", alt="Megobari")
+					.gallery-preview-wrapper-item
+						.gallery-preview-wrapper-item-img
+								a(data-fancybox="gallery" href="img/gallery/4.jpg")
+									img(src="/img/gallery/4.jpg", alt="Megobari")
+					.gallery-preview-wrapper-item
+						.gallery-preview-wrapper-item-img
+							a(data-fancybox="gallery" href="img/gallery/1.jpg")
+								img(src="/img/gallery/1.jpg", alt="Megobari")
+					.gallery-preview-wrapper-item
+						.gallery-preview-wrapper-item-img
+								a(data-fancybox="gallery" href="img/gallery/2.jpg")
+									img(src="/img/gallery/2.jpg", alt="Megobari")
+					.gallery-preview-wrapper-item
+						.gallery-preview-wrapper-item-img
+							a(data-fancybox="gallery" href="img/gallery/3.jpg")
+								img(src="/img/gallery/3.jpg", alt="Megobari")
+					.gallery-preview-wrapper-item
+						.gallery-preview-wrapper-item-img
+								a(data-fancybox="gallery" href="img/gallery/4.jpg")
+									img(src="/img/gallery/4.jpg", alt="Megobari")
+					.gallery-preview-wrapper-item
+						.gallery-preview-wrapper-item-img
+							a(data-fancybox="gallery" href="img/gallery/1.jpg")
+								img(src="/img/gallery/1.jpg", alt="Megobari")
+					.gallery-preview-wrapper-item
+						.gallery-preview-wrapper-item-img
+								a(data-fancybox="gallery" href="img/gallery/2.jpg")
+									img(src="/img/gallery/2.jpg", alt="Megobari")
+									
+				a(href="gallery.html").btn Перейти в галерею
+
+			.separator
+				.separator-content
+					h2 +7 (905) 700-40-07
+					p info@megobari.wine
+				.separator-black
+
+			.contacts-index
+				h2 Контакты
+				.contacts-index-wrapper
+					.contacts-index-wrapper-item
+						.map
+							img(src="img/map.jpg", alt="map")
+					.contacts-index-wrapper-item
+						form
+							p
+								//- label(for="user-name") Имя
+								input(type="text", name="user-name" placeholder="Имя")
+							p
+								//- label(for="user-email") E-mail
+								input(type="text", name="user-email" placeholder="E-mail")
+							p
+								//- label(for="user-message") Сообщение
+								textarea(name="user-message" rows="4" placeholder="Сообщение")
+							
+							button(type="submit").btn Отправить
+							
+
+		section#site-footer
+			include partials/site-footer

@@ -1,0 +1,20 @@
+{
+  "name": "megobari",
+  "description": "web megobaru",
+  "main": "index.js",
+  "authors": [
+    "Alexander Dolgan"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/AlexanderDolgan/megobari",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "^3.3.1"
+  }
+}

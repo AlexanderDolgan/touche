@@ -1,0 +1,22 @@
+//верхняя линия с телефоном горячей линии и переключением языка
+.header-top {
+	& a {
+		color: ac(text);
+	}
+	& a:last-child {
+		position: absolute;
+		right: 2rem;
+	}
+}
+
+@media (min-width: $b-large) {
+	.header-top {
+		& a {
+			padding: 0 2rem;
+		}
+		& a:last-child {
+			position: relative;
+			right: 0;
+		}
+	}
+}

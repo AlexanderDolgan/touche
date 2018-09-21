@@ -1,0 +1,41 @@
+/*
+Theme Name: grossmetall
+Author: Alexander Dolgan
+Author URI:
+Version: 1.0
+*/
+
+@font-face {
+	font-family: 'girottbold';
+	src: url('../fonts/girott_bold.otf');
+}
+
+@font-face {
+	font-family: 'grotesque';
+	src: url('../fonts/basisgrotesquepro-regular.woff');
+}
+
+@font-face {
+	font-family: 'grotesque-bold';
+	src: url('../fonts/basisgrotesquepro-bold.woff');
+}
+
+//settings-var
+@import "util/settings";
+@import "util/mixin";
+@import "util/function";
+//sprites
+@import "util/sprite";
+
+//base
+@import "base/base";
+
+//layout
+@import "layout/index";
+
+//modules
+@import "modules/index";
+
+//states
+@import "states/index";
+

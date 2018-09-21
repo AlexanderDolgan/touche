@@ -1,0 +1,14 @@
+.social {
+	position: absolute;
+	right: 4rem;
+	top: 4rem;
+	& .ic-fb {
+		display: inline-block;
+		padding-right: 4rem;
+		@include retina-sprite($ic-facebook-group);
+	}
+	& .ic-in {
+		display: inline-block;
+		@include retina-sprite($ic-instagram-group);
+	}
+}

@@ -1,0 +1,36 @@
+.contacts {
+	@include container();
+	text-align: center;
+}
+
+.contacts address {
+	& ul {
+		margin: 0;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		& a {
+			color: ac(text);
+		}
+	}
+}
+
+.contacts .social {
+	display: inline-block;
+	margin-top: 4rem;
+	& .ic-fb {
+		display: inline-block;
+		padding-right: 4rem;
+		@include retina-sprite($ic-facebook-group);
+	}
+	& .ic-in {
+		display: inline-block;
+		@include retina-sprite($ic-instagram-group);
+	}
+}
+
+.contacts #map {
+	width: 100%;
+	height: 50rem;
+	margin-top: 4rem;
+}

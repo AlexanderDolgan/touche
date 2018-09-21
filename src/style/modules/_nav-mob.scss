@@ -1,0 +1,166 @@
+.mob-top {
+	position: absolute;
+	width: 100%;
+	height: 8rem;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2rem;
+	z-index: 9;
+}
+
+.mob-top {
+	& .logo {
+		& img {
+			display: block;
+			max-width: 15rem;
+		}
+	}
+}
+
+// nav open btn
+.nav-open-btn {
+	@include retina-sprite($ic-menu-p-group);
+	cursor: pointer;
+	align-self: center;
+}
+
+@media (min-width: $b-large) {
+	.mob-top {
+		display: none;
+	}
+}
+
+// основная навигация мобильная версия
+.nav-mob {
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+	top: 0;
+	left: -100vw;
+	padding: 8rem;
+	background-color: ac(primary);
+	z-index: 10;
+	transition: .33s left ease-out;
+	overflow-x: scroll;
+}
+
+.nav-mob ul {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-around;
+	width: 100%;
+	list-style: none;
+	padding: 4rem 0;
+	margin: 0;
+	border-bottom: .4rem solid ac(text);
+	& li {
+		width: 100%;
+		& a {
+			display: block;
+			width: 100%;
+			margin-top: 2rem;
+			font-size: 3rem;
+			font-family: 'girottbold', sans-serif;
+			color: ac(text);
+		}
+	}
+}
+
+.nav-mob .social {
+	margin-top: 4rem;
+	& .ic-fb {
+		display: inline-block;
+		padding-right: 4rem;
+		@include retina-sprite($ic-facebook-group);
+	}
+	& .ic-in {
+		display: inline-block;
+		@include retina-sprite($ic-instagram-group);
+	}
+}
+
+.active-nav {
+	left: 0;
+}
+
+@media (min-width: $b-medium) {
+	.nav-mob {
+		width: percentage(5/12);
+		box-shadow: 1rem 1rem 2rem rgba(0,0,0,.2);
+	}
+	.nav-mob ul {
+		padding: 5rem 0;
+		& li {
+			& a {
+				font-size: 3rem;
+			}
+		}
+	}
+}
+
+.nav-mob .close-btn {
+	@include retina-sprite($ic-close-group);
+	cursor: pointer;
+	position: absolute;
+	right: 2rem;
+	top: 2rem;
+	transition: transform .3s ease-in-out;
+	z-index: 9;
+}
+
+
+.no-scroll {
+	overflow: hidden;
+}
+
+.active-nav li{
+	animation-name: fade-left;
+	animation-duration: .3s;
+	animation-timing-function: ease-out;
+	animation-direction: normal;
+	animation-fill-mode: both;
+}
+
+.active-nav li:nth-child(1) {
+	animation-delay: .15s;
+}
+.active-nav li:nth-child(2) {
+	animation-delay: .2s;
+}
+.active-nav li:nth-child(3) {
+	animation-delay: .25s;
+}
+.active-nav li:nth-child(4) {
+	animation-delay: .3s;
+}
+.active-nav li:nth-child(5) {
+	animation-delay: .35s;
+}
+.active-nav li:nth-child(6) {
+	animation-delay: .4s;
+}
+.active-nav li:nth-child(7) {
+	animation-delay: .45s;
+}
+.active-nav li:nth-child(8) {
+	animation-delay: .5s;
+}
+.active-nav li:nth-child(9) {
+	animation-delay: .5s;
+}
+
+@keyframes fade-left {
+	0% {
+		margin-left: -1rem;
+		opacity: 0;
+	}
+	100% {
+		margin-left: 0;
+		opacity: 1;
+	}
+}
+

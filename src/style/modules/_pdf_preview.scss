@@ -1,0 +1,5 @@
+.wine-wrapper {
+	@include container(0, 0, 96rem);
+	padding-bottom: 4rem;
+	min-height: 96rem;
+}

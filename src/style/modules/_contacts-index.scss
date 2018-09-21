@@ -1,0 +1,66 @@
+.contacts-index {
+	@include container();
+	padding-right: .5rem;
+	padding-left: .5rem;
+	& h2 {
+		text-align: center;
+		&::after {
+			content: '';
+			display: block;
+			width: 40%;
+			height: 0.2rem;
+			background-color: ac(primary);
+			margin: 0 auto;
+			margin-top: 2rem;
+		}
+	}
+}
+
+.contacts-index-wrapper {
+	margin-top: 2rem;
+	& .contacts-index-wrapper-item {
+		& .map {
+			position: relative;
+			height: 37rem;
+			overflow: hidden;
+			& img {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: auto;
+				height: 100%;
+			}
+		}
+		& form {
+			& p:nth-child(n+2) {
+				margin-top: 1.75rem;
+			}
+			& button {
+				display: block;
+				margin-top: 2rem;
+				width: 100%;
+			}
+		}
+	}
+}
+
+@media (min-width: $b-medium-advance) {
+	.contacts-index-wrapper {
+		display: flex;
+		& .contacts-index-wrapper-item {
+			width: percentage(6/12);
+			padding: 1rem;
+			& form {
+				& p {
+					margin: 0;
+				}
+				& button {
+					width: auto;
+					margin: 0 auto;
+					margin-top: 2rem;
+				}
+			}
+		}
+	}
+}
