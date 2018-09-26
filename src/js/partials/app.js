@@ -1,4 +1,9 @@
 $(document).ready(function(){
+
+	$('.loader').css({
+		opacity : 0,
+		visibility: 'hidden'
+	});
 	
 	$('.nav-open-btn').on('click', function() {
 		$('body').toggleClass('no-scroll');
@@ -23,53 +28,56 @@ $(document).ready(function(){
 		$('.nav-mob').removeClass('active-nav');
 	});
 
-	$(window).scroll(function() {    
-    var scroll = $(window).scrollTop();
-    if (scroll > 0) {
-			$('.nav-screen').addClass('is-sticky');
-			// $('.sticky').css('background-color', 'white');
-			// $('.sticky ul li a').css('color', '#292929');
-    } else {
-			$('.nav-screen').removeClass('is-sticky');
-			// $('.sticky').css('background-color', 'transparent');
-			// $('.sticky ul li a').css('color', 'white');
-		}
-	}); //missing );
+	$('.gallary-slick').slick( {
+		lazyLoad: 'ondemand',
+		pauseOnHover: false,
+		dots: true
+	});
 
-	// $('.menu-category').mouseenter( function() {
-	// 	$('.menu-content-nav').stop().addClass('menu-content-nav-active');
-	// });
+	$('.slick-menu').slick( {
+		dots: false,
+		autoplay: true
+	});
+
+	AOS.init();
+
+	$('#menu-about').click(function() {
+		$.scrollTo(document.getElementById('about'), 800);
+	});
+	$('#menu-menu').click(function() {
+		$.scrollTo(document.getElementById('menu'), 800);
+	});
+	$('#menu-gallery').click(function() {
+		$.scrollTo(document.getElementById('gallery'), 800);
+	});
+	$('#menu-contacts').click(function() {
+		$.scrollTo(document.getElementById('site-footer'), 800);
+	});
+	
+	$('#menu-about-m').click(function() {
+		$.scrollTo(document.getElementById('about'), 800);
+	});
+	$('#menu-menu-m').click(function() {
+		$.scrollTo(document.getElementById('menu'), 800);
+	});
+	$('#menu-gallery-m').click(function() {
+		$.scrollTo(document.getElementById('gallery'), 800);
+	});
+	$('#menu-contacts-m').click(function() {
+		$.scrollTo(document.getElementById('site-footer'), 800);
+	});
+
+	$('#menu-about-s').click(function() {
+		$.scrollTo(document.getElementById('about'), 800);
+	});
+	$('#menu-menu-s').click(function() {
+		$.scrollTo(document.getElementById('menu'), 800);
+	});
+	$('#menu-gallery-s').click(function() {
+		$.scrollTo(document.getElementById('gallery'), 800);
+	});
+	$('#menu-contacts-s').click(function() {
+		$.scrollTo(document.getElementById('site-footer'), 800);
+	});
 
 });
-
-// Yandex Map
-ymaps.ready(init);
-
-function init() {
-
-    ////YandexApi map
-    var megobariMap = new ymaps.Map("map", {
-            center: [55.757921, 37.636778], //megobari
-            zoom: 17,
-
-            //убрать кнопки управления
-            controls: ['zoomControl']
-        }),
-
-
-        // Создаем геообъект с типом геометрии "Круг".
-        megobariPlacemark = new ymaps.GeoObject({
-            // Описание геометрии
-            geometry: {
-                type: "Point",
-                coordinates: [55.757921, 37.636778]
-            }
-        });
-
-    megobariMap.geoObjects.add(megobariPlacemark);
-
-
-// отключается zoom при прокрутке страницы
-    megobariMap.behaviors.disable('scrollZoom');
-    // megobariMap.behaviors.disable('drag');
-}

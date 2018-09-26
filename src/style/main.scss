@@ -5,20 +5,11 @@ Author URI:
 Version: 1.0
 */
 
-@font-face {
-	font-family: 'girottbold';
-	src: url('../fonts/girott_bold.otf');
-}
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500,600&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300&subset=cyrillic');
 
-@font-face {
-	font-family: 'grotesque';
-	src: url('../fonts/basisgrotesquepro-regular.woff');
-}
-
-@font-face {
-	font-family: 'grotesque-bold';
-	src: url('../fonts/basisgrotesquepro-bold.woff');
-}
+@import "../../bower_components/slick-master/slick/slick.scss";
+@import "../../bower_components/slick-master/slick/slick-theme.scss";
 
 //settings-var
 @import "util/settings";

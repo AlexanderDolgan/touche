@@ -1,38 +1,37 @@
-.footer-contact-wrapper
-	.footer-contact
-		.footer-contact-item
-			h4 Адрес
-			p Москва, 
-			p Маросейка 15
+.footer-wrapper
+	.footer-darkframe
+	.footer-content(data-aos="fade-down" data-aos-duration="1000" data-aos-delay="500")
+		.footer-content-header
+			.header-text
+				h2 Контакты
+				.curly-brace
+					.brace
+			.header-img
+				include ../../img/assets/icons/point_w.svg
+		.footer-content-main
+			.wrap
+				.address
+					ul
+						li Москва, ул. Родщельская, 15, стр. 22
+						li т. +7 (495) 798-78-28
+						li info@touche.ru
+				
+				.work-time
+					ul
+						li Пн-Пт: 11.00 - 23.00
+						li Сб-Вс: 12.00 - 04.00
 
-		.footer-contact-item
-			h4 Соц. сети
 			.social
-				a(href="//www.facebook.com/megobari15/" target="_blank").ic-fb
-				a(href="//www.instagram.com/megobari.wine/" target="_blank").ic-in
-
-		.footer-contact-item
-			h4 Контакты
-			p т. +7 (905) 700-40-07
-			p info@megobari.wine
-
-.footer-nav-wrapper
-	.footer-nav
-		.logo
-			img(src="img/assets/brand/logo-g.svg", alt="megobari logo")
-		.footer-nav-links
-			ul
-				li
-					a(href="index.html") Главная
-				li
-					a(href="menu.html") Меню
-				li
-					a(href="gallery.html") Галерея
-				li
-					a(href="news.html") Новости
-				li
-					a(href="contacts.html") Контакты
+				ul
+					li
+						a(href="//www.facebook.com/" target="_blank").ic-fb
+					li
+						a(href="//www.instagram.com/" target="_blank").ic-in
 
 
-script(src="//api-maps.yandex.ru/2.1/?lang=ru_RU")
-script(src="./js/main.min.js")
+script(src="//code.jquery.com/jquery-3.3.1.min.js")
+script(src="//unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js")
+script(src="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js")
+script(src="//unpkg.com/aos@next/dist/aos.js")
+script(src="/js/main.min.js")
+

@@ -1,24 +1,24 @@
 {
-  "name": "megobari",
+  "name": "touche",
   "version": "1.0.0",
-  "description": "web site megobari",
+  "description": "web site touche",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AlexanderDolgan/megobari.git"
+    "url": "git+https://github.com/AlexanderDolgan/touche.git"
   },
   "keywords": [
-    "megobari"
+    "touche"
   ],
   "author": "Alexander Dolgan",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/AlexanderDolgan/megobari/issues"
+    "url": "https://github.com/AlexanderDolgan/touche/issues"
   },
-  "homepage": "https://github.com/AlexanderDolgan/megobari#readme",
+  "homepage": "https://github.com/AlexanderDolgan/touche#readme",
   "devDependencies": {
     "browser-sync": "^2.23.6",
     "gulp": "^3.9.1",

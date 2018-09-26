@@ -13,6 +13,7 @@ html {
 body {
 	font-size: $body-font-size;
 	font-family: $global-font-family;
+	font-weight: $global-font-weight;
 	line-height: $global-line-height;
 	background-color: $body-background;
 	-webkit-font-smoothing: $font-smooth;
@@ -45,6 +46,7 @@ address {
 p {
 	line-height: $paragraph-lineheight;
 	margin-bottom: 0;
+	margin-top: 4rem;
 }
 
 // Headings
@@ -64,24 +66,21 @@ h6 {
 }
 
 
-//medium
-h1 {font-size: 34px;}
+h1 {font-size: 45px;}
 h2 {font-size: 24px;}
-h3 {font-size: 20px;}
+h3 {font-size: 18px;}
 h4 {font-size: 16px;}
 h5 {font-size: 14px;}
 h6 {font-size: 14px;}
 
-h2 {
-	position: relative;
-	text-transform: uppercase;
-	letter-spacing: .2rem;
-	font-size: 24px;
-	margin: 4rem 0;
-	@media (min-width: $b-medium) {
-		font-size: 32px;
-		margin: 6rem 0 0 0;
-	}
+@media (min-width: $b-medium) {
+	h1 {font-size: 56px;}
+	h2 {font-size: 28px;}
+	h3 {font-size: 18px;}
+}
+
+@media (min-width: $b-xxlarge) {
+	h1 {font-size: 72px;}
 }
 
 //Bloquote

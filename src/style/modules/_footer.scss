@@ -1,102 +1,129 @@
-.footer-contact-wrapper {
-	background-color: hsl(0,0,10);
-	border-bottom: solid 1px hsl(0,0,30);
-	width: 100%;
-	margin-top: 4rem;
+#site-footer {
+	position: relative;
+	background-image: url(../img/gallery/interior-touche-4.jpg);
+	background-size: cover;
+	background-position: center;
 }
 
-.footer-contact {
-	display: flex;
-	flex-flow: row wrap;
-	@include container();
-	& .footer-contact-item {
+.footer-wrapper {
+	& .footer-darkframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: rgba(0,0,0,.6);
+		height: 100%;
 		width: 100%;
-		margin-top: 2rem;
-		text-align: center;
-		color: white;
-		& a {
-			color: currentColor;
-		}
-		& p {
-			margin: .5rem;
-			font-size: 1.5rem;
-			&:first-of-type {
-				margin-top: 2rem;
-			}
-		}
-		& .social {
-			margin-top: 2rem;
-			& .ic-fb {
-				display: inline-block;
-				margin-right: 2rem;
-				@include retina-sprite($ic-facebook-w-group);
-			}
-			& .ic-in {
-				display: inline-block;
-				@include retina-sprite($ic-instagram-w-group);
-			}
-		}
 	}
 }
 
-.footer-nav-wrapper {
-	background-color: ac(black);
-}
-
-.footer-nav {
+#site-footer .footer-content {
 	@include container();
-	text-align: center;
-	& .logo {
-		max-width: 24rem;
-		margin: 0 auto;
-		& img {
-			display: block;
-			width: 100%;
+	color: ac(white);
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+
+#site-footer .footer-content .footer-content-header {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	& .header-text {
+		align-self: center;
+	}
+	& .header-img {
+		width: 8rem;
+		height: 8rem;
+		& path {
+			fill: ac(white);
 		}
 	}
-	&-links ul {
-		margin: 0;
-		margin-top: 4rem;
-		padding: 0;
-		list-style: none;
-		& li {
-			display: inline-block;
-			& a {
-				color: ac(gray);
-				font-size: 1.5rem;
-				font-family: 'girottbold', sans-serif;
-				&::after {
-					content: '|';
-					display: inline-block;
-					margin: 0 1rem;
+	& .curly-brace {
+		& .brace {
+			position: relative;
+			width: 100%;
+			margin-top: 2rem;
+		}
+		& .brace::before {
+			content: '';
+			position: absolute;
+			display: block;
+			height: 10px;
+			width: 50%;
+			left: 0;
+			border-top: solid 1px ac(white);
+			border-top-right-radius: 15px;
+		}
+		& .brace::after {
+			content: '';
+			position: absolute;
+			display: block;
+			height: 10px;
+			width: 50%;
+			right: 0rem;
+			border-top: solid 1px ac(white);
+			border-top-left-radius: 15px;
+		}
+	}
+}
+
+#site-footer .footer-content .footer-content-main {
+	margin-top: 8rem;
+}
+
+#site-footer .footer-content .footer-content-main {
+	& .wrap {
+		display: flex;
+		flex-flow: row wrap;
+	}
+	& .address {
+		width: 100%;
+		padding-top: 4rem;
+		& ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+	}
+	& .work-time {
+		width: 100%;
+		padding-top: 4rem;
+		& ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+	}
+	& .social {
+		margin-top: 8rem;
+		& ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			font-size: 0;
+			& li {
+				display: inline-block;
+				&:first-child {
+					margin-right: 2rem;
 				}
 			}
-			&:last-child a::after {
-				content:'';
-				display: none;
-			}
+		}
+		& .ic-fb {		
+			display: block;
+			@include retina-sprite($ic-facebook-w-group);
+			margin: 0 auto;
+		}
+		& .ic-in {
+			display: block;
+			@include retina-sprite($ic-instagram-w-group);
+			margin: 0 auto;
 		}
 	}
 }
 
-@media (min-width: $b-medium-advance) {
-	.footer-contact {
-		& .footer-contact-item {
-			position: relative;
-			width: percentage(4/12);
-			&::after {
-				content: '';
-				position: absolute;
-				display: block;
-				top: 0;
-				right: 0;
-				height: 100%;
-				width: 2px;
-				border-right: dashed .1rem ac(white);
-			}
-			&:last-child::after {
-				display: none;
-			}
+@media (min-width: $b-medium) {
+	#site-footer .footer-content .footer-content-main {
+		& .wrap {
+			flex-flow: row nowrap;
 		}
 	}
 }

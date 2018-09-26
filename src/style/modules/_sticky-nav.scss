@@ -1,0 +1,38 @@
+.sticky-nav {
+	display: none;
+}
+
+@media (min-width: $b-large) {
+	.sticky-nav {
+		display: block;
+		position: fixed;
+		top: 50%;
+		left: 0;
+		width: 5rem;
+		z-index: 999;
+		padding: 0.5rem;
+		border-top-right-radius: 1rem;
+		border-bottom-right-radius: 1rem;
+		& ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			& li {
+				display: block;
+				padding: .5rem;
+				&:last-child{
+					padding-bottom: 0;
+				}
+			}
+		}
+		& path {
+			fill: black;
+		}
+	}
+}
+
+@media (min-width: $b-large) {
+	.sticky-nav {
+		width: 6rem;
+	}
+}

@@ -1,12 +1,12 @@
 {
-  "name": "megobari",
-  "description": "web megobaru",
+  "name": "touche",
+  "description": "web touche",
   "main": "index.js",
   "authors": [
     "Alexander Dolgan"
   ],
   "license": "ISC",
-  "homepage": "https://github.com/AlexanderDolgan/megobari",
+  "homepage": "https://github.com/AlexanderDolgan/touche",
   "ignore": [
     "**/.*",
     "node_modules",

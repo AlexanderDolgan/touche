@@ -1,89 +1,158 @@
 .hero {
 	position: relative;
 	height: 100vh;
-	max-height: 100vh;
 	width: 100vw;
 	display: flex;
 	flex-flow: row nowrap;
 	align-items: center;
-	justify-content: center;
-	background-image: url(../img/bg-image.jpg);
+	padding: 2rem;
+	background-color: ac(black);
+	background-image: url(../img/bg.jpg);
 	background-size: cover;
 	background-position: center;
 }
 
-.hero-inside {
-	height: 40rem;
+.hero .hero-darkframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,.6);
+	height: 100%;
+	width: 100%;
 }
-
-// @supports (background-attachment: fixed) {
-//   .hero {
-//     background-attachment: fixed;
-//   }
-// }
 
 .hero .hero-text {
-	text-align: center;
 	color: ac(white);
-	padding: 2rem;
-	margin-top: 8rem;
-	& h1 {
-		font-size: 6rem;
-	}
-	.hero-text-contact {
-		margin-top: 2rem;
-		& p {
-			font-size: 2.5rem;
-			margin: 0;
+	display: inline-block;
+	& .curly-brace {
+		& .brace {
+			position: relative;
+			width: 100%;
+			margin-top: 4rem;
 		}
-	}
-	& a {
-		color: ac(white);
-	}
-	& .hero-anchor {
-		display: block;
-		@include retina-sprite($ic-chevron-down-group);
-		margin: 0 auto;
-		margin-top: 2rem;
-	}
-	& button {
-		margin-top: 4rem;
+		& .brace::before {
+			content: '';
+			position: absolute;
+			display: block;
+			height: 10px;
+			width: 50%;
+			left: 0;
+			border-top: solid 1px white;
+			border-top-right-radius: 15px;
+		}
+		& .brace::after {
+			content: '';
+			position: absolute;
+			display: block;
+			height: 10px;
+			width: 50%;
+			right: 0rem;
+			border-top: solid 1px white;
+			border-top-left-radius: 15px;
+		}
 	}
 }
 
-@media (min-width: $b-small) {
-	.hero .text {
-		margin-top: 12rem;
-		& h1 {
-			font-size: 8rem;
-		}
-		.contact {
-			& p {
-				font-size: 3.25rem;
+.hero .work-time {
+	position: absolute;
+	bottom: 2rem;
+	left: 2rem;
+	& ul {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		& li {
+			color: ac(white);
+			display: inline-block;
+			font-family: $second-font-family;
+			font-weight: 500;
+			font-size: 1.5rem;
+			&:first-child {
+				margin-right: 2rem;
 			}
 		}
 	}
 }
 
+.hero .social {
+	display: none;
+}
+
 @media (min-width: $b-medium) {
 	.hero {
-		background-attachment: fixed;
+		background-attachment: fixed;	
 	}
-	.hero .text {
-		margin-top: 0;
-		max-width: 60rem;
-		& h1 {
-			font-size: 10rem;
+	
+	.hero .hero-text {
+		margin-left: 8rem;
+	}
+
+	.hero .work-time {
+		right: 2rem;
+		left: auto;
+	}
+
+	.hero .social {
+		display: block;
+		position: absolute;
+		bottom: 2rem;
+		left: 2rem;
+		& ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			font-size: 0;
+			& li {
+				display: inline-block;
+				&:first-child {
+					margin-right: 2rem;
+				}
+			}
+		}
+		& .ic-fb {		
+			display: block;
+			@include retina-sprite($ic-facebook-w-group);
+			margin: 0 auto;
+		}
+		& .ic-in {
+			display: block;
+			@include retina-sprite($ic-instagram-w-group);
+			margin: 0 auto;
 		}
 	}
 }
 
 @media (min-width: $b-large) {
-	.hero .text {
-		margin-top: 20rem;
-		max-width: inherit;
-		& h1 {
-			font-size: 10rem;
-		}
+	.hero .hero-text {
+		margin-left: 16rem;
+	}
+
+	.hero .social {
+		bottom: 8rem;
+		left: 8rem;
+	}
+
+	.hero .work-time {
+		right: 8rem;
+		bottom: 8rem;
+		left: auto;
+	}
+}
+
+
+@media (min-width: $b-xxlarge) {
+	.hero .hero-text {
+		margin-left: 30rem;
+	}
+
+	.hero .social {
+		bottom: 10rem;
+		left: 10rem;
+	}
+
+	.hero .work-time {
+		right: 10rem;
+		bottom: 10rem;
+		left: auto;
 	}
 }

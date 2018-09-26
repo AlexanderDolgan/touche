@@ -1,115 +1,249 @@
 include partials/head
 body
+	.loader
+		.preloader
+			.lines
+				.line.line-1
+				.line.line-2
+				.line.line-3
+			.loading-text загрузка
+	.sticky-nav(data-aos="fade-right"
+     data-aos-offset="1000"
+		 data-aos-duration="1000"
+     data-aos-easing="ease-in-sine")
+		nav
+			ul
+				li
+					a(href="#" id="menu-about-s")
+						include ../img/assets/icons/wine.svg
+				li
+					a(href="#" id="menu-menu-s")
+						include ../img/assets/icons/menu-assortiment.svg
+				li
+					a(href="#" id="menu-gallery-s")
+						include ../img/assets/icons/pictures.svg
+				li
+					a(href="#" id="menu-contacts-s")
+						include ../img/assets/icons/point_b.svg
 	#site-wrapper
 		include partials/site-header
 
 		section#site-main
-			.categories
-				.categories-item
-					a(href="#")
-						.categories-item-text
+			.text#about
+				article
+					.article-header(data-aos="fade-up" data-aos-duration="1000" )
+						.header-text
 							h2 О ресторане
-						.categories-item-img-wrapper
-							.categories-item-img-wrapper-shade
-							img(src="img/gallery/1.jpg", alt="cat img")
+							.curly-brace
+								.brace
+						.header-img
+							include ../img/assets/icons/wine.svg
+					.article-content(data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500")
+						p.
+							Touche’ расположился на территории Трехгорной мануфактуры, став еще одним весомым поводом для поездки на Родчельскую. Владелица проекта — выпускница школы Ragout Лариса Мамедова и ее партнер и шеф-повар Тарас Кириенко, сделали ставку на демократичное винное место.
+						p.
+							Touche’ — место, где встречаются друзья. Концепция проекта сформировалась очень быстро, и все внутренние процессы выстраивались вокруг нее. Меню, например, условно разделено на две части. В одной из них блюда рассчитаны на одного человека, в другой - много закусок, которые удобно делить на компанию. В винной карте большая подборка бокальных позиций благодаря системе coravin, что позволяет каждому гостю продегустировать вина, ориентируясь только на свой вкус.
+						p.
+							С распределением главных ролей здесь все просто. Лариса Мамедова — идейный вдохновитель, ее часто можно встретить в зале за общением с гостями, на кухне карт-бланш у Тараса Кириенко.
+						p.
+							Тарас создавал меню, не следуя лишь одному гастрономическому направлению. Его блюда — это авторское прочтение мировых трендов, современные технологии и многолетний опыт работы. Помимо основного меню в баре действует специальное обеденное, действующее ежедневно с 12:00 до 16:00.
 
-				.categories-item
-					a(href="#")
-						.categories-item-text
+			.gallery(data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500")#gallery
+				.gallery-wrapper
+					.gallery-header
+						.header-text
+							h2 Галерея
+							.curly-brace
+								.brace
+						.header-img
+							include ../img/assets/icons/pictures.svg
+					.gallary-slick
+						.gallery-item
+							img(src="/img/gallery/interior-touche-1.jpg", alt="touche img gallery")
+						.gallery-item
+							img(data-lazy="/img/gallery/interior-touche-2.jpg", alt="touche img gallery")
+						.gallery-item
+							img(data-lazy="/img/gallery/interior-touche-3.jpg", alt="touche img gallery")
+						.gallery-item
+							img(data-lazy="/img/gallery/interior-touche-4.jpg", alt="touche img gallery")
+						.gallery-item
+							img(data-lazy="/img/gallery/interior-touche-5.jpg", alt="touche img gallery")
+						.gallery-item
+							img(data-lazy="/img/gallery/interior-touche-6.jpg", alt="touche img gallery")
+						.gallery-item
+							img(data-lazy="/img/gallery/interior-touche-7.jpg", alt="touche img gallery")
+
+			.menu#menu
+				.menu-wrapper
+					.menu-header(data-aos="fade-up" data-aos-duration="1000" )
+						.header-text
 							h2 Меню
-						.categories-item-img-wrapper
-							.categories-item-img-wrapper-shade
-							img(src="img/gallery/2.jpg", alt="cat img")
+							.curly-brace
+								.brace
+						.header-img
+							include ../img/assets/icons/menu-assortiment.svg
+					.menu-content(data-aos="fade-up" data-aos-duration="1000" )
+						.slick-menu
+							.slick-menu-item
+								h3 Основное меню
+								.menu-item
+									.name Печеный маринованный баклажан с вялеными томатами и сыром фета
+									.price 370
+								.menu-item
+									.name Оливки с маринованным виноградом
+									.price 500
+								.menu-item
+									.name Мясная тарелка
+									.price 890
+								.menu-item
+									.name Ассорти сыров с конфитюром из кураги
+									.price 990
+								.menu-item
+									.name Запеченый камамбер с брусникой и подсушенным багетом
+									.price 600
+								.menu-item
+									.name Печеный маринованный баклажан с вялеными томатами и сыром фета
+									.price 370
+								.menu-item
+									.name Оливки с маринованным виноградом
+									.price 500
+								.menu-item
+									.name Мясная тарелка
+									.price 890
+								.menu-item
+									.name Ассорти сыров с конфитюром из кураги
+									.price 990
+								.menu-item
+									.name Запеченый камамбер с брусникой и подсушенным багетом
+									.price 600
+								.menu-item
+									.name Печеный маринованный баклажан с вялеными томатами и сыром фета
+									.price 370
+								.menu-item
+									.name Оливки с маринованным виноградом
+									.price 500
+								.menu-item
+									.name Мясная тарелка
+									.price 890
+								.menu-item
+									.name Ассорти сыров с конфитюром из кураги
+									.price 990
+								.menu-item
+									.name Запеченый камамбер с брусникой и подсушенным багетом
+									.price 600
+								.menu-item
+									.name Печеный маринованный баклажан с вялеными томатами и сыром фета
+									.price 370
+								.menu-item
+									.name Оливки с маринованным виноградом
+									.price 500
+								.menu-item
+									.name Мясная тарелка
+									.price 890
+								.menu-item
+									.name Ассорти сыров с конфитюром из кураги
+									.price 990
+								.menu-item
+									.name Запеченый камамбер с брусникой и подсушенным багетом
+									.price 600
 
-				.categories-item
-					a(href="#")
-						.categories-item-text
-							h2 Специальное предложение
-						.categories-item-img-wrapper
-							.categories-item-img-wrapper-shade
-							img(src="img/gallery/3.jpg", alt="cat img")
-			
-			.text
-				h2 Грузинский винный бар MeGoBari
-				.text-wrapper
-					p.
-						Ресторанная группа Guliani Group (рестораны и кулинарные лавки Оджахури, Хинкали Хаус, Kulinari, Mochi) запустила новый проект на Маросейке – грузинский винный бар MEGOBARI.
-					
-					p.
-						Megobari с грузинского переводится, как «друг». Если Оджахури (переводится как «семья», «домашний») – проект, больше подходящий для семейных посиделок и банкетов, в том числе и с детьми, то новый проект будет с акцентом на времяпрепровождение в кругу друзей с вином и грузинской кухней.
-					p.
-						Шеф-поваром нового проекта стал Тамаз Орагвелидзе, прославивший кафе на фуникулере в Тбилиси своими аджарскими хачапури и пончиками. Су шефом стал Борис Гиоргберидзе, который также является шеф-хинкальщиком Хинкали Хаус и Оджахури. Открытая кухня строится вокруг дровяной печи, в которой тут выпекают аджарские хачапури с хрустящим тонким тестом и начинками на любой вкус. Например, лодочка со свеклой и сыром; со шпинатом и сыром: с сыром и беконом или с курицей. Также в печи готовят мегрельские или имеретинские хачапури , и домашние.
+							.slick-menu-item
+								h3 Красное вино
+								.menu-item
+									.name Печеный маринованный баклажан с вялеными томатами и сыром фета
+									.price 370
+								.menu-item
+									.name Оливки с маринованным виноградом
+									.price 500
+								.menu-item
+									.name Мясная тарелка
+									.price 890
+								.menu-item
+									.name Ассорти сыров с конфитюром из кураги
+									.price 990
+								.menu-item
+									.name Запеченый камамбер с брусникой и подсушенным багетом
+									.price 600
+								.menu-item
+									.name Печеный маринованный баклажан с вялеными томатами и сыром фета
+									.price 370
+								.menu-item
+									.name Оливки с маринованным виноградом
+									.price 500
+								.menu-item
+									.name Мясная тарелка
+									.price 890
+								.menu-item
+									.name Ассорти сыров с конфитюром из кураги
+									.price 990
 
-			.separator
-				.separator-content
-					h2 Летнее меню
-					p Бизнес ланч от 330 руб.
-				.separator-black
-
-			.gallery-preview
-				h2 Галерея
-				.gallery-preview-wrapper
-					.gallery-preview-wrapper-item
-						.gallery-preview-wrapper-item-img
-							a(data-fancybox="gallery" href="img/gallery/2.jpg")
-								img(src="/img/gallery/2.jpg", alt="Megobari")
-					.gallery-preview-wrapper-item
-						.gallery-preview-wrapper-item-img
-								a(data-fancybox="gallery" href="img/gallery/4.jpg")
-									img(src="/img/gallery/4.jpg", alt="Megobari")
-					.gallery-preview-wrapper-item
-						.gallery-preview-wrapper-item-img
-							a(data-fancybox="gallery" href="img/gallery/1.jpg")
-								img(src="/img/gallery/1.jpg", alt="Megobari")
-					.gallery-preview-wrapper-item
-						.gallery-preview-wrapper-item-img
-								a(data-fancybox="gallery" href="img/gallery/2.jpg")
-									img(src="/img/gallery/2.jpg", alt="Megobari")
-					.gallery-preview-wrapper-item
-						.gallery-preview-wrapper-item-img
-							a(data-fancybox="gallery" href="img/gallery/3.jpg")
-								img(src="/img/gallery/3.jpg", alt="Megobari")
-					.gallery-preview-wrapper-item
-						.gallery-preview-wrapper-item-img
-								a(data-fancybox="gallery" href="img/gallery/4.jpg")
-									img(src="/img/gallery/4.jpg", alt="Megobari")
-					.gallery-preview-wrapper-item
-						.gallery-preview-wrapper-item-img
-							a(data-fancybox="gallery" href="img/gallery/1.jpg")
-								img(src="/img/gallery/1.jpg", alt="Megobari")
-					.gallery-preview-wrapper-item
-						.gallery-preview-wrapper-item-img
-								a(data-fancybox="gallery" href="img/gallery/2.jpg")
-									img(src="/img/gallery/2.jpg", alt="Megobari")
-									
-				a(href="gallery.html").btn Перейти в галерею
-
-			.separator
-				.separator-content
-					h2 +7 (905) 700-40-07
-					p info@megobari.wine
-				.separator-black
-
-			.contacts-index
-				h2 Контакты
-				.contacts-index-wrapper
-					.contacts-index-wrapper-item
-						.map
-							img(src="img/map.jpg", alt="map")
-					.contacts-index-wrapper-item
-						form
-							p
-								//- label(for="user-name") Имя
-								input(type="text", name="user-name" placeholder="Имя")
-							p
-								//- label(for="user-email") E-mail
-								input(type="text", name="user-email" placeholder="E-mail")
-							p
-								//- label(for="user-message") Сообщение
-								textarea(name="user-message" rows="4" placeholder="Сообщение")
-							
-							button(type="submit").btn Отправить
-							
+							.slick-menu-item
+								h3 Белое вино
+								.menu-item
+									.name Печеный маринованный баклажан с вялеными томатами и сыром фета
+									.price 370
+								.menu-item
+									.name Оливки с маринованным виноградом
+									.price 500
+								.menu-item
+									.name Мясная тарелка
+									.price 890
+								.menu-item
+									.name Ассорти сыров с конфитюром из кураги
+									.price 990
+								.menu-item
+									.name Запеченый камамбер с брусникой и подсушенным багетом
+									.price 600
+								.menu-item
+									.name Печеный маринованный баклажан с вялеными томатами и сыром фета
+									.price 370
+								.menu-item
+									.name Оливки с маринованным виноградом
+									.price 500
+								.menu-item
+									.name Мясная тарелка
+									.price 890
+								.menu-item
+									.name Ассорти сыров с конфитюром из кураги
+									.price 990
+								.menu-item
+									.name Запеченый камамбер с брусникой и подсушенным багетом
+									.price 600
+								.menu-item
+									.name Печеный маринованный баклажан с вялеными томатами и сыром фета
+									.price 370
+								.menu-item
+									.name Оливки с маринованным виноградом
+									.price 500
+								.menu-item
+									.name Мясная тарелка
+									.price 890
+								.menu-item
+									.name Ассорти сыров с конфитюром из кураги
+									.price 990
+								.menu-item
+									.name Запеченый камамбер с брусникой и подсушенным багетом
+									.price 600
+								.menu-item
+									.name Печеный маринованный баклажан с вялеными томатами и сыром фета
+									.price 370
+								.menu-item
+									.name Оливки с маринованным виноградом
+									.price 500
+								.menu-item
+									.name Мясная тарелка
+									.price 890
+								.menu-item
+									.name Ассорти сыров с конфитюром из кураги
+									.price 990
+								.menu-item
+									.name Запеченый камамбер с брусникой и подсушенным багетом
+									.price 600
+						
+						.menu-end
+							.curly-brace
+								.brace
+						
 
 		section#site-footer
 			include partials/site-footer

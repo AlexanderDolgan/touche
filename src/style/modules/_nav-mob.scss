@@ -1,31 +1,35 @@
 .mob-top {
 	position: absolute;
 	width: 100%;
-	height: 8rem;
 	top: 0;
 	left: 0;
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: space-between;
-	align-items: center;
+	align-items: flex-start;
 	padding: 2rem;
 	z-index: 9;
 }
 
 .mob-top {
 	& .logo {
-		& img {
+		& a {
 			display: block;
-			max-width: 15rem;
+			& svg {
+				width: 11rem;
+				& path {
+					fill: white;
+				}
+			}
 		}
 	}
 }
 
 // nav open btn
 .nav-open-btn {
-	@include retina-sprite($ic-menu-p-group);
+	@include retina-sprite($ic-menu-w-group);
 	cursor: pointer;
-	align-self: center;
+
 }
 
 @media (min-width: $b-large) {
@@ -37,15 +41,29 @@
 // основная навигация мобильная версия
 .nav-mob {
 	position: absolute;
-	height: 100vh;
-	width: 100vw;
+	height: 100%;
+	width: 100%;
 	top: 0;
 	left: -100vw;
 	padding: 8rem;
-	background-color: ac(primary);
+	background-color: rgba(0,0,0,.9);
 	z-index: 10;
 	transition: .33s left ease-out;
 	overflow-x: scroll;
+}
+
+.nav-mob {
+	& .logo {
+		& a {
+			display: block;
+			& svg {
+				width: 11rem;
+				& path {
+					fill: white;
+				}
+			}
+		}
+	}
 }
 
 .nav-mob ul {
@@ -54,9 +72,12 @@
 	justify-content: space-around;
 	width: 100%;
 	list-style: none;
-	padding: 4rem 0;
 	margin: 0;
-	border-bottom: .4rem solid ac(text);
+	padding: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-25%, -50%);
 	& li {
 		width: 100%;
 		& a {
@@ -64,22 +85,10 @@
 			width: 100%;
 			margin-top: 2rem;
 			font-size: 3rem;
-			font-family: 'girottbold', sans-serif;
-			color: ac(text);
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 500;
+			color: ac(white);
 		}
-	}
-}
-
-.nav-mob .social {
-	margin-top: 4rem;
-	& .ic-fb {
-		display: inline-block;
-		padding-right: 4rem;
-		@include retina-sprite($ic-facebook-group);
-	}
-	& .ic-in {
-		display: inline-block;
-		@include retina-sprite($ic-instagram-group);
 	}
 }
 
@@ -103,7 +112,7 @@
 }
 
 .nav-mob .close-btn {
-	@include retina-sprite($ic-close-group);
+	@include retina-sprite($ic-close-w-group);
 	cursor: pointer;
 	position: absolute;
 	right: 2rem;
