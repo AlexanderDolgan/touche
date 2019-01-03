@@ -1,0 +1,35 @@
+.header-pages {
+	& .mob-top {
+		background-color: black;
+		position: relative;
+		align-items: center;
+	}
+}
+
+.header-pages .mob-top .logo {
+	& a {
+		& svg {
+			max-height: 4rem;
+			width: 5rem;
+		}
+	}
+}
+
+@media (min-width: $b-large) {
+	.header-pages {
+		& .nav-screen {
+			background-color: black;
+			position: relative;
+			padding: 3rem 8rem;
+			align-items: center;
+		}
+	}
+
+	.header-pages .nav-screen .logo {
+		& a {
+			& svg {
+				max-height: 6rem;
+			}
+		}
+	}
+}

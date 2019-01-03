@@ -1,0 +1,52 @@
+include partials/head
+body
+	.loader
+		.preloader
+			.lines
+				.line.line-1
+				.line.line-2
+				.line.line-3
+			.loading-text загрузка
+	.sticky-nav-wrapper(data-aos="fade-right"
+			data-aos-offset="1200"
+			data-aos-duration="500"
+			data-aos-easing="ease-in-sine")
+		.sticky-nav
+			nav
+				ul
+					li.menu-about
+						a(href="#")
+					li.menu-menu
+						a(href="#")
+					li.menu-news
+						a(href="#")
+					li.menu-gallery
+						a(href="#")
+					li.menu-contacts
+						a(href="#")
+	#site-wrapper
+		include partials/site-header/nav-mob
+		.header-pages
+			.mob-top
+				.logo
+					a(href="index.html")
+						include ../img/assets/brand/logo.svg
+				#nav-open-btn.nav-open-btn
+			
+		section#site-header.header-pages
+			include partials/site-header/nav-screen
+
+		section#site-main
+			.gallery-page-wrapper
+				h3 Видео
+				.gallery-page-video
+					.item
+						video(controls poster="img/gallery/vid-1.jpg" src="https://touche.spicedpages.ru/wp-content/uploads/Ролик первый про Touche wine bar & kitchen_1.mp4")
+					.item
+						video(controls poster="img/gallery/vid-1.jpg" src="https://touche.spicedpages.ru/wp-content/uploads/Ролик первый про Touche wine bar & kitchen_1.mp4")
+					.item
+						video(controls poster="img/gallery/vid-1.jpg" src="https://touche.spicedpages.ru/wp-content/uploads/Ролик первый про Touche wine bar & kitchen_1.mp4")
+				
+				.gallery-photos
+		section#site-footer
+			include partials/site-footer

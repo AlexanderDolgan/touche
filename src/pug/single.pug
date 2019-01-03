@@ -1,0 +1,64 @@
+include partials/head
+body
+	.loader
+		.preloader
+			.lines
+				.line.line-1
+				.line.line-2
+				.line.line-3
+			.loading-text загрузка
+	.sticky-nav-wrapper(data-aos="fade-right"
+			data-aos-offset="1200"
+			data-aos-duration="500"
+			data-aos-easing="ease-in-sine")
+		.sticky-nav
+			nav
+				ul
+					li.menu-about
+						a(href="#")
+					li.menu-menu
+						a(href="#")
+					li.menu-news
+						a(href="#")
+					li.menu-gallery
+						a(href="#")
+					li.menu-contacts
+						a(href="#")
+	#site-wrapper
+		include partials/site-header/nav-mob
+		.mob-top
+			.logo
+				a(href="index.html")
+					include ../img/assets/brand/logo.svg
+			#nav-open-btn.nav-open-btn
+			
+		section#site-header.header-pages
+			include partials/site-header/nav-screen
+
+		section#site-main
+			.single-wrapper
+				article(data-aos="fade-up" data-aos-duration="500" )
+					h2 Открытие летней веранды и новое летнее меню
+					.img
+					.content
+						p.
+							В предвкушении жаркой поры, новых впечатлений и знакомств, слов, увлечений и вкусов.
+						p.
+							В предвкушении жаркой поры, новых впечатлений и знакомств, слов, увлечений и вкусов.
+						p.
+							В предвкушении жаркой поры, новых впечатлений и знакомств, слов, увлечений и вкусов.
+						p.
+							В предвкушении жаркой поры, новых впечатлений и знакомств, слов, увлечений и вкусов.
+						p.
+							В предвкушении жаркой поры, новых впечатлений и знакомств, слов, увлечений и вкусов.
+						p.
+							В предвкушении жаркой поры, новых впечатлений и знакомств, слов, увлечений и вкусов.
+						p.
+							В предвкушении жаркой поры, новых впечатлений и знакомств, слов, увлечений и вкусов.
+						p.
+							В предвкушении жаркой поры, новых впечатлений и знакомств, слов, увлечений и вкусов.
+						p.
+							В предвкушении жаркой поры, новых впечатлений и знакомств, слов, увлечений и вкусов.
+
+		section#site-footer
+			include partials/site-footer

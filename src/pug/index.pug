@@ -7,82 +7,59 @@ body
 				.line.line-2
 				.line.line-3
 			.loading-text загрузка
-	.sticky-nav(data-aos="fade-right"
-     data-aos-offset="1000"
-		 data-aos-duration="1000"
-     data-aos-easing="ease-in-sine")
-		nav
-			ul
-				li
-					a(href="#" id="menu-about-s")
-						include ../img/assets/icons/wine.svg
-				li
-					a(href="#" id="menu-menu-s")
-						include ../img/assets/icons/menu-assortiment.svg
-				li
-					a(href="#" id="menu-gallery-s")
-						include ../img/assets/icons/pictures.svg
-				li
-					a(href="#" id="menu-contacts-s")
-						include ../img/assets/icons/point_b.svg
+	.sticky-nav-wrapper(data-aos="fade-right"
+			data-aos-offset="1200"
+			data-aos-duration="500"
+			data-aos-easing="ease-in-sine")
+		.sticky-nav
+			nav
+				ul
+					li.menu-about
+						a(href="#")
+					li.menu-menu
+						a(href="#")
+					li.menu-news
+						a(href="#")
+					li.menu-gallery
+						a(href="#")
+					li.menu-contacts
+						a(href="#")
 	#site-wrapper
 		include partials/site-header
-
-		section#site-main
+		section#site-main(style="background-color: #f7f7f7")
 			.text#about
+				.decor.decor-img-1
+					img(src="img/assets/Asset-2.png" alt="img" data-aos="fade-left" data-aos-duration="500")
+				.decor.decor-img-2
+					img(src="img/assets/Asset-8.png", alt="img" data-aos="fade-right" data-aos-duration="500")
 				article
-					.article-header(data-aos="fade-up" data-aos-duration="1000" )
+					.article-header(data-aos="fade-up" data-aos-duration="500" )
 						.header-text
 							h2 О ресторане
 							.curly-brace
 								.brace
 						.header-img
 							include ../img/assets/icons/wine.svg
-					.article-content(data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500")
+					.article-content(data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200")
 						p.
-							Touche’ расположился на территории Трехгорной мануфактуры, став еще одним весомым поводом для поездки на Родчельскую. Владелица проекта — выпускница школы Ragout Лариса Мамедова и ее партнер и шеф-повар Тарас Кириенко, сделали ставку на демократичное винное место.
+							Винный бар Touche’ - знаковое место на Трехгорной Мануфактуре. Владелец проекта — выпускница школы Ragout Лариса Мамедова и ее партнер и шеф-повар Тарас Кириенко, сделали ставку на демократичное винное место.
 						p.
-							Touche’ — место, где встречаются друзья. Концепция проекта сформировалась очень быстро, и все внутренние процессы выстраивались вокруг нее. Меню, например, условно разделено на две части. В одной из них блюда рассчитаны на одного человека, в другой - много закусок, которые удобно делить на компанию. В винной карте большая подборка бокальных позиций благодаря системе coravin, что позволяет каждому гостю продегустировать вина, ориентируясь только на свой вкус.
-						p.
-							С распределением главных ролей здесь все просто. Лариса Мамедова — идейный вдохновитель, ее часто можно встретить в зале за общением с гостями, на кухне карт-бланш у Тараса Кириенко.
-						p.
-							Тарас создавал меню, не следуя лишь одному гастрономическому направлению. Его блюда — это авторское прочтение мировых трендов, современные технологии и многолетний опыт работы. Помимо основного меню в баре действует специальное обеденное, действующее ежедневно с 12:00 до 16:00.
-
-			.gallery(data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500")#gallery
-				.gallery-wrapper
-					.gallery-header
-						.header-text
-							h2 Галерея
-							.curly-brace
-								.brace
-						.header-img
-							include ../img/assets/icons/pictures.svg
-					.gallary-slick
-						.gallery-item
-							img(src="/img/gallery/interior-touche-1.jpg", alt="touche img gallery")
-						.gallery-item
-							img(data-lazy="/img/gallery/interior-touche-2.jpg", alt="touche img gallery")
-						.gallery-item
-							img(data-lazy="/img/gallery/interior-touche-3.jpg", alt="touche img gallery")
-						.gallery-item
-							img(data-lazy="/img/gallery/interior-touche-4.jpg", alt="touche img gallery")
-						.gallery-item
-							img(data-lazy="/img/gallery/interior-touche-5.jpg", alt="touche img gallery")
-						.gallery-item
-							img(data-lazy="/img/gallery/interior-touche-6.jpg", alt="touche img gallery")
-						.gallery-item
-							img(data-lazy="/img/gallery/interior-touche-7.jpg", alt="touche img gallery")
+							Винная карта насчитывает около 280 наименований вин, и почти все из них можно заказать по бокалам.
 
 			.menu#menu
+				.decor.decor-img-3
+					img(src="img/assets/Asset-3.png" alt="img" data-aos="fade-right" data-aos-duration="500")
+				.decor.decor-img-4
+					img(src="img/assets/Asset-4.png" alt="img" data-aos="fade-right" data-aos-duration="500")
 				.menu-wrapper
-					.menu-header(data-aos="fade-up" data-aos-duration="1000" )
+					.menu-header(data-aos="fade-up" data-aos-duration="500" )
 						.header-text
 							h2 Меню
 							.curly-brace
 								.brace
 						.header-img
 							include ../img/assets/icons/menu-assortiment.svg
-					.menu-content(data-aos="fade-up" data-aos-duration="1000" )
+					.menu-content(data-aos="fade-up" data-aos-duration="500" )
 						.slick-menu
 							.slick-menu-item
 								h3 Основное меню
@@ -148,37 +125,7 @@ body
 									.price 600
 
 							.slick-menu-item
-								h3 Красное вино
-								.menu-item
-									.name Печеный маринованный баклажан с вялеными томатами и сыром фета
-									.price 370
-								.menu-item
-									.name Оливки с маринованным виноградом
-									.price 500
-								.menu-item
-									.name Мясная тарелка
-									.price 890
-								.menu-item
-									.name Ассорти сыров с конфитюром из кураги
-									.price 990
-								.menu-item
-									.name Запеченый камамбер с брусникой и подсушенным багетом
-									.price 600
-								.menu-item
-									.name Печеный маринованный баклажан с вялеными томатами и сыром фета
-									.price 370
-								.menu-item
-									.name Оливки с маринованным виноградом
-									.price 500
-								.menu-item
-									.name Мясная тарелка
-									.price 890
-								.menu-item
-									.name Ассорти сыров с конфитюром из кураги
-									.price 990
-
-							.slick-menu-item
-								h3 Белое вино
+								h3 Завтраки
 								.menu-item
 									.name Печеный маринованный баклажан с вялеными томатами и сыром фета
 									.price 370
@@ -240,10 +187,165 @@ body
 									.name Запеченый камамбер с брусникой и подсушенным багетом
 									.price 600
 						
+						.menu-links
+							.menu-links-item
+								a(href="img/assets/touche-wine-list-2018.pdf" target="_blank")
+									img(src="img/assets/wine.svg",  alt="cheef")
+									h3 Вино <span>(pdf)</span>
+							.menu-links-item
+								a(href="img/assets/touche-bar-list-2018.pdf" target="_blank")
+									img(src="img/assets/coktails.svg",  alt="cheef")
+									h3 Бар <span>(pdf)</span>
+
 						.menu-end
 							.curly-brace
 								.brace
-						
 
+			.news
+				.decor.decor-img-5
+					img(src="img/assets/Asset-6.png" alt="img" data-aos="fade-right" data-aos-duration="500")
+				.decor.decor-img-6
+					img(src="img/assets/Asset-7.png" alt="img" data-aos="fade-left" data-aos-duration="500")
+				.news-wrapper#news
+					.news-header(data-aos="fade-up" data-aos-duration="500" )
+						.header-text
+							h2 Новости
+							.curly-brace
+								.brace
+						.header-img
+							include ../img/assets/icons/news.svg
+					.news-item-wrapper
+						.news-item(data-aos="fade-up" data-aos-duration="500" )
+							a(href="#")
+								.news-item-image
+								.news-item-header
+									h3 Открытие летней веранды и новое летнее меню
+									.news-item-header-description
+										p.
+											В предвкушении жаркой поры, новых впечатлений и знакомств, слов, увлечений и вкусов.
+
+						.news-item(data-aos="fade-up" data-aos-duration="500" data-aos-delay="200")
+							a(href="#")
+								.news-item-image
+								.news-item-header
+									h3 Открытие летней веранды и новое летнее меню
+									.news-item-header-description
+										p.
+											В предвкушении жаркой поры, новых впечатлений и знакомств, слов, увлечений и вкусов.
+
+						.news-item(data-aos="fade-up" data-aos-duration="500" data-aos-delay="400")
+							a(href="#")
+								.news-item-image
+								.news-item-header
+									h3 Открытие летней веранды и новое летнее меню
+									.news-item-header-description
+										p.
+											В предвкушении жаркой поры, новых впечатлений и знакомств, слов, увлечений и вкусов.
+
+			
+
+			.gallery(data-aos="fade-up" data-aos-duration="500" data-aos-delay="500")#gallery
+				.decor.decor-img-7
+					img(src="img/assets/Asset-10.png" alt="img" data-aos="fade-right" data-aos-duration="500")
+				.decor.decor-img-8
+					img(src="img/assets/Asset-1.png" alt="img" data-aos="fade-left" data-aos-duration="500")
+				.gallery-wrapper
+					.gallery-header
+						.header-text
+							h2 Галерея
+							.curly-brace
+								.brace
+						.header-img
+							include ../img/assets/icons/pictures.svg
+					
+					.gallary-slick
+						.gallery-item
+							img(src="/img/gallery/interior-touche-1.jpg", alt="touche img gallery")
+						.gallery-item
+							img(data-lazy="/img/gallery/interior-touche-2.jpg", alt="touche img gallery")
+						.gallery-item
+							img(data-lazy="/img/gallery/interior-touche-3.jpg", alt="touche img gallery")
+						.gallery-item
+							img(data-lazy="/img/gallery/interior-touche-4.jpg", alt="touche img gallery")
+						.gallery-item
+							img(data-lazy="/img/gallery/interior-touche-5.jpg", alt="touche img gallery")
+						.gallery-item
+							img(data-lazy="/img/gallery/interior-touche-6.jpg", alt="touche img gallery")
+						.gallery-item
+							img(data-lazy="/img/gallery/interior-touche-7.jpg", alt="touche img gallery")
+						.gallery-item
+							img(data-lazy="/img/gallery/interior-touche-8.jpg", alt="touche img gallery")
+					
+					.gallery-btn
+						a(href="#").btn Перейти в галерею
+
+			.staff
+				.decor.decor-img-9
+					img(src="img/assets/Asset-9.png" alt="img" data-aos="fade-right" data-aos-duration="500")
+				.decor.decor-img-10
+					img(src="img/assets/Asset-12.png" alt="img" data-aos="fade-left" data-aos-duration="500")
+				.staff-wrapper
+					.staff-header(data-aos="fade-up" data-aos-duration="500" )
+						.header-text
+							h2 Команда
+							.curly-brace
+								.brace
+						.header-img
+							include ../img/assets/icons/ladle.svg
+					.staff-content
+						.staff-content-item(data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200")
+							.left
+								.left-avatar
+									img(src="img/gallery/cheef-1.jpg", alt="staff")
+							.right
+								.right-wrapper
+									h3 Константин Константинопольский
+									p.
+										Touche’ расположился на территории Трехгорной мануфактуры, став еще одним весомым поводом для поездки на Родчельскую. Владелица проекта — выпускница школы Ragout Лариса Мамедова и ее партнер и шеф-повар Тарас Кириенко, сделали ставку на демократичное винное место.
+
+						.staff-content-item(data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200")
+							.left
+								.left-avatar
+									img(src="img/gallery/cheef-2.jpg", alt="staff")
+							.right
+								.right-wrapper
+									h3 Константин Константинопольский
+									p.
+										Touche’ расположился на территории Трехгорной мануфактуры, став еще одним весомым поводом для поездки на Родчельскую. Владелица проекта — выпускница школы Ragout Лариса Мамедова и ее партнер и шеф-повар Тарас Кириенко, сделали ставку на демократичное винное место.
+
+						.staff-content-item(data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200")
+							.left
+								.left-avatar
+									img(src="img/gallery/cheef-3.jpg", alt="staff")
+							.right
+								.right-wrapper
+									h3 Константин Константинопольский
+									p.
+										Touche’ расположился на территории Трехгорной мануфактуры, став еще одним весомым поводом для поездки на Родчельскую. Владелица проекта — выпускница школы Ragout Лариса Мамедова и ее партнер и шеф-повар Тарас Кириенко, сделали ставку на демократичное винное место.
+						
+			.shop
+				.decor.decor-img-11
+					img(src="img/assets/Asset-4.png" alt="img" data-aos="fade-right" data-aos-duration="500")
+				.decor.decor-img-12
+					img(src="img/assets/Asset-10.png" alt="img" data-aos="fade-left" data-aos-duration="500")
+				.shop-wrapper#shop
+					.shop-header(data-aos="fade-up" data-aos-duration="500" )
+						.header-text
+							h2 Магазин №22
+							.curly-brace
+								.brace
+						.header-img
+							include ../img/assets/icons/shop.svg
+					.shop-item-wrapper
+						.shop-item(data-aos="fade-up" data-aos-duration="500" )
+							p.
+								При ресторане работает «Магазин №22», расположенный дверь в дверь с Touche'. Там продается все, что нужно жителю Трехгорки — блюда из ресторана, завтраки, свежий кофе, молочные продукты, бакалея - быстро и удобно. 
+
+						.shop-item(data-aos="fade-up" data-aos-duration="500" data-aos-delay="200")
+							.shop-item-image
+
+						.shop-item(data-aos="fade-up" data-aos-duration="500" data-aos-delay="400")
+							.shop-item-image
+										
 		section#site-footer
 			include partials/site-footer

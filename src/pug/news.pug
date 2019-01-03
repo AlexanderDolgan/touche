@@ -1,0 +1,81 @@
+include partials/head
+body
+	.loader
+		.preloader
+			.lines
+				.line.line-1
+				.line.line-2
+				.line.line-3
+			.loading-text загрузка
+	.sticky-nav-wrapper(data-aos="fade-right"
+			data-aos-offset="1200"
+			data-aos-duration="500"
+			data-aos-easing="ease-in-sine")
+		.sticky-nav
+			nav
+				ul
+					li.menu-about
+						a(href="#")
+					li.menu-menu
+						a(href="#")
+					li.menu-news
+						a(href="#")
+					li.menu-gallery
+						a(href="#")
+					li.menu-contacts
+						a(href="#")
+	#site-wrapper
+		include partials/site-header/nav-mob
+		.header-pages
+			.mob-top
+				.logo
+					a(href="index.html")
+						include ../img/assets/brand/logo.svg
+				#nav-open-btn.nav-open-btn
+			
+		section#site-header.header-pages
+			include partials/site-header/nav-screen
+
+		section#site-main
+			.news-home-wrapper
+				.news-header(data-aos="fade-up" data-aos-duration="500" )
+					.header-text
+						h2 Новости
+						.curly-brace
+							.brace
+					.header-img
+						include ../img/assets/icons/news.svg
+				.news-item(data-aos="fade-up" data-aos-duration="500" )
+					.left
+						a(href="#").header: h2 Открытие летней веранды и новое летнее меню
+						.exerpt
+							p.
+								В предвкушении жаркой поры, новых впечатлений и знакомств, слов, увлечений и вкусов.
+					.right
+						a(href="#").img
+
+				.news-item(data-aos="fade-up" data-aos-duration="500" )
+					.left
+						a(href="#").header: h2 Открытие летней веранды и новое летнее меню
+						p.exerpt.
+							В предвкушении жаркой поры, новых впечатлений и знакомств, слов, увлечений и вкусов.
+					.right
+						a(href="#").img
+				
+				.news-item(data-aos="fade-up" data-aos-duration="500" )
+					.left
+						a(href="#").header: h2 Открытие летней веранды и новое летнее меню
+						p.exerpt.
+							В предвкушении жаркой поры, новых впечатлений и знакомств, слов, увлечений и вкусов.
+					.right
+						a(href="#").img
+
+				.news-item(data-aos="fade-up" data-aos-duration="500" )
+					.left
+						a(href="#").header: h2 Открытие летней веранды и новое летнее меню
+						p.exerpt.
+							В предвкушении жаркой поры, новых впечатлений и знакомств, слов, увлечений и вкусов.
+					.right
+						a(href="#").img
+		section#site-footer
+			include partials/site-footer

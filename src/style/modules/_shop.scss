@@ -1,0 +1,87 @@
+.shop {
+	@include container();
+}
+
+.shop-wrapper {
+	padding: 0 2rem;
+}
+
+.shop-header {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	& .header-text {
+		align-self: center;
+	}
+	& .header-img {
+		width: 8rem;
+		height: 8rem;
+	}
+	& .curly-brace {
+		& .brace {
+			position: relative;
+			width: 100%;
+			margin-top: 2rem;
+		}
+		& .brace::before {
+			content: '';
+			position: absolute;
+			display: block;
+			height: 10px;
+			width: 50%;
+			left: 0;
+			border-top: solid 1px ac(black);
+			border-top-right-radius: 15px;
+		}
+		& .brace::after {
+			content: '';
+			position: absolute;
+			display: block;
+			height: 10px;
+			width: 50%;
+			right: 0rem;
+			border-top: solid 1px ac(black);
+			border-top-left-radius: 15px;
+		}
+	}
+}
+
+.shop-item-wrapper {
+	display: flex;
+	flex-flow: row wrap;
+	margin-top: 10rem;
+}
+
+.shop-item {
+	position: relative;
+	min-height: 50rem;
+	width: 100%;
+	& p:first-child {
+		margin-top: 0;
+	}
+	&-image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	&:nth-child(2) .shop-item-image {
+		// background-image: url(../img/gallery/shop-1.jpg);
+	}
+	&:nth-child(3) .shop-item-image{
+		// background-image: url(../img/gallery/shop-3.jpg);
+	}
+}
+
+@media (min-width: $b-medium) {
+	.shop {
+		flex-flow: row nowrap;
+	}
+	.shop-item {
+		width: percentage(4/12);
+	}
+}

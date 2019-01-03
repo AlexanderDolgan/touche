@@ -3,25 +3,97 @@
 }
 
 @media (min-width: $b-large) {
-	.sticky-nav {
+	.sticky-nav-wrapper {
 		display: block;
 		position: fixed;
+		z-index: 2;
+		width: 6rem;
+		height: 100%;
+	}
+	.sticky-nav {
+		display: block;
+		position: absolute;
+		width: 6rem;
 		top: 50%;
 		left: 0;
-		width: 5rem;
-		z-index: 999;
 		padding: 0.5rem;
 		border-top-right-radius: 1rem;
 		border-bottom-right-radius: 1rem;
+		transform: translateY(-50%);
 		& ul {
 			margin: 0;
 			padding: 0;
 			list-style: none;
 			& li {
 				display: block;
+				position: relative;
 				padding: .5rem;
+				width: 5rem;
+				height: 5rem;
+				background-position: center;
+				background-size: 5rem;
+				background-repeat: no-repeat;
+				margin: 1rem 0;
 				&:last-child{
 					padding-bottom: 0;
+				}
+				& a {
+					position: relative;
+					display: block;
+					white-space: nowrap;
+					font-size: 0;
+					&::after {
+						display: none;
+						position: absolute;
+						top: .5rem;
+						left: 0;
+						// opacity: 0;
+						padding: 0.25rem 1rem;
+						color: white;
+						background-color: ac(black);
+						border-radius: .5rem;
+						font-size: 1.5rem;
+						animation: slide-in-left .33s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+					}
+				}
+				&:hover>a::after{
+					left: 120%;
+					// opacity: 1;
+				}
+			}
+			& .menu-about {
+				background-image: url('../img/assets/icons/wine.svg');
+				&:hover>a::after {
+					content: 'О ресторане';
+					display: block;
+				}
+			}
+			& .menu-menu {
+				background-image: url('../img/assets/icons/menu-assortiment.svg');
+				&:hover>a::after {
+					content: 'Меню';
+					display: block;
+				}
+			}
+			& .menu-news {
+				background-image: url('../img/assets/icons/news.svg');
+				&:hover>a::after {
+					content: 'Новости';
+					display: block;
+				}
+			}
+			& .menu-gallery {
+				background-image: url('../img/assets/icons/pictures.svg');
+				&:hover>a::after {
+					content: 'Галерея';
+					display: block;
+				}
+			}
+			& .menu-contacts {
+				background-image: url('../img/assets/icons/point_b.svg');
+				&:hover>a::after {
+					content: 'Контакты';
+					display: block;
 				}
 			}
 		}
@@ -31,8 +103,22 @@
 	}
 }
 
-@media (min-width: $b-large) {
-	.sticky-nav {
-		width: 6rem;
+@media (min-width: $b-xxlarge) {
+	.sticky-nav-wrapper {
+		width: 8rem;
 	}
+	.sticky-nav {
+		width: 8rem;
+	}
+}
+
+ @keyframes slide-in-left-sticky {
+  0% {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }

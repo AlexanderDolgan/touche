@@ -6,13 +6,13 @@ $second-font-family: 'Montserrat', sans-serif;
 $global-font-size: 8px;
 $global-font-weight: 300;
 $body-font-size: 1.75rem;
-$global-line-height: 2;
+$global-line-height: 1.75;
 $font-smooth: antialiased;
 
 //Colors
 $colors: (
 	primary: hsl(0,0,17),
-	secondary: hsl(0, 0, 100),
+	secondary: hsl(0, 0, 0),
 	third: hsl(309,100,80),
 	text: hsl(0,0,16),
 	accept: hsl(90,45,45),

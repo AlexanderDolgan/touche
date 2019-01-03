@@ -8,7 +8,7 @@
 }
 
 //container mixin with max width
-@mixin container ($pad-vert-small:16rem, $pad-vert:24rem, $max-width: $container) {
+@mixin container ($pad-vert-small:8rem, $pad-vert:16rem, $max-width: $container) {
 	position: relative;
 	width: 100%;
 	max-width: $max-width;

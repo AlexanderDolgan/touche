@@ -1,11 +1,10 @@
 .text {
 	@include container();
-	padding-left: 2rem;
-	padding-right: 2rem;
 }
 
 .text article {
-	max-width: $b-large;
+	padding-left: 2rem;
+	padding-right: 2rem;
 	margin: 0 auto;
 	& .article-header {
 		display: flex;
@@ -47,7 +46,7 @@
 		}
 	}
 	& .article-content {
-		margin-top: 8rem;
+		margin-top: 4rem;
 		& p {
 			break-inside: avoid-column;
 		}
@@ -58,8 +57,9 @@
 }
 
 @media (min-width: $b-medium) {
-	.text {
+	.text article {
 		& .article-content {
+			margin-top: 8rem;
 			column-count: 2;
 			column-gap: 4rem;
 		}
